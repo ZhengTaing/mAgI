@@ -19,6 +19,8 @@
 		A460326B2B78292900B1A563 /* mAgITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460326A2B78292900B1A563 /* mAgITests.swift */; };
 		A46032752B78292900B1A563 /* mAgIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46032742B78292900B1A563 /* mAgIUITests.swift */; };
 		A46032772B78292900B1A563 /* mAgIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46032762B78292900B1A563 /* mAgIUITestsLaunchTests.swift */; };
+		A47B182C2B98E6B400E06CA7 /* ChatGPTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B182B2B98E6B400E06CA7 /* ChatGPTAPI.swift */; };
+		A47B18302B98E75000E06CA7 /* char_page_frozen_anna_message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B182F2B98E75000E06CA7 /* char_page_frozen_anna_message.swift */; };
 		A47BE5572B8D45D300D78A38 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A47BE5562B8D45D300D78A38 /* Alamofire */; };
 		A4A08C082B87E2B6009781EA /* whisper_mic.py in Resources */ = {isa = PBXBuildFile; fileRef = A4A08C042B87E2B6009781EA /* whisper_mic.py */; };
 		A4A08C092B87E2B6009781EA /* cli.py in Resources */ = {isa = PBXBuildFile; fileRef = A4A08C052B87E2B6009781EA /* cli.py */; };
@@ -70,6 +72,8 @@
 		A46032702B78292900B1A563 /* mAgIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mAgIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46032742B78292900B1A563 /* mAgIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAgIUITests.swift; sourceTree = "<group>"; };
 		A46032762B78292900B1A563 /* mAgIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAgIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A47B182B2B98E6B400E06CA7 /* ChatGPTAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTAPI.swift; sourceTree = "<group>"; };
+		A47B182F2B98E75000E06CA7 /* char_page_frozen_anna_message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = char_page_frozen_anna_message.swift; sourceTree = "<group>"; };
 		A4A08C042B87E2B6009781EA /* whisper_mic.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = whisper_mic.py; path = ../../../../../../S2T/whisper_mic/whisper_mic/whisper_mic.py; sourceTree = "<group>"; };
 		A4A08C052B87E2B6009781EA /* cli.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = cli.py; path = ../../../../../../S2T/whisper_mic/whisper_mic/cli.py; sourceTree = "<group>"; };
 		A4A08C062B87E2B6009781EA /* utils.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = utils.py; path = ../../../../../../S2T/whisper_mic/whisper_mic/utils.py; sourceTree = "<group>"; };
@@ -183,6 +187,14 @@
 			path = mAgIUITests;
 			sourceTree = "<group>";
 		};
+		A47B182A2B98E66B00E06CA7 /* FOC_message */ = {
+			isa = PBXGroup;
+			children = (
+				A47B182B2B98E6B400E06CA7 /* ChatGPTAPI.swift */,
+			);
+			path = FOC_message;
+			sourceTree = "<group>";
+		};
 		A4A08C032B87E2A0009781EA /* whisper_mic */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 			children = (
 				A4D1BE112B7A04DA007AE380 /* char_page_frozen.swift */,
 				A4A08C0C2B87E3FF009781EA /* char_page_frozen_anna.swift */,
+				A47B182F2B98E75000E06CA7 /* char_page_frozen_anna_message.swift */,
 				A4F76AFC2B89545100F1F85D /* char_page_frozen_anna_call.swift */,
 				A4F76AFE2B8966ED00F1F85D /* char_page_frozen_anna_video_call.swift */,
 			);
@@ -220,8 +233,8 @@
 		A4E8D1FF2B7AB6C200EF29A8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A47B182A2B98E66B00E06CA7 /* FOC_message */,
 				A4A08C032B87E2A0009781EA /* whisper_mic */,
-				A4F439952B8C45EC0097ED78 /* API */,
 				A4E8D2022B7AB6E200EF29A8 /* InputView.swift */,
 			);
 			path = Components;
@@ -235,21 +248,6 @@
 				A41D18E92B893A86004E0D8D /* AuthViewModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A4F439952B8C45EC0097ED78 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				A4F439962B8C46410097ED78 /* OpenAI */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		A4F439962B8C46410097ED78 /* OpenAI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OpenAI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +318,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					A46032552B78292900B1A563 = {
 						CreatedOnToolsVersion = 14.2;
@@ -407,7 +405,9 @@
 				A4E8D2072B7AC89900EF29A8 /* Registration.swift in Sources */,
 				A41D18DB2B893166004E0D8D /* Message.swift in Sources */,
 				A41D18EA2B893A86004E0D8D /* AuthViewModel.swift in Sources */,
+				A47B182C2B98E6B400E06CA7 /* ChatGPTAPI.swift in Sources */,
 				A4A08C0D2B87E3FF009781EA /* char_page_frozen_anna.swift in Sources */,
+				A47B18302B98E75000E06CA7 /* char_page_frozen_anna_message.swift in Sources */,
 				A4F76AFF2B8966ED00F1F85D /* char_page_frozen_anna_video_call.swift in Sources */,
 				A4D1BE122B7A04DA007AE380 /* char_page_frozen.swift in Sources */,
 				A4D1BE102B79DD5B007AE380 /* HomeScreen.swift in Sources */,
@@ -451,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -512,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -580,7 +582,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,7 +613,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
